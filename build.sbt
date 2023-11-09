@@ -4,8 +4,7 @@ ThisBuild / scalaVersion := "3.3.1"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "fyers-client-scala",
-    idePackagePrefix := Some("com.fyers.api.client")
+    name := "fyers-client-scala"
   )
 
 

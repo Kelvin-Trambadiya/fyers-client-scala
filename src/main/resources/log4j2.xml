@@ -6,7 +6,7 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Logger name="com.kelvin.api.client" level="debug" additivity="false">
+        <Logger name="in.ind.kelvin.fyersclientscala" level="debug" additivity="false">
             <AppenderRef ref="LogToConsole"/>
         </Logger>
         <Root level="warn">

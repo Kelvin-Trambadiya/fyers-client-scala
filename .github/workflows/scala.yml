@@ -22,9 +22,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: 'sbt'
-    - name: Install sbt
+    - name: Add sbt repository and install sbt
       run: |
-        echo "Installing sbt..."
+        echo "Adding sbt repository..."
+        echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+        curl -fsSL https://repo.scala-sbt.org/scalasbt/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/sbt-archive-keyring.gpg
         sudo apt-get update
         sudo apt-get install -y sbt
     - name: Run tests

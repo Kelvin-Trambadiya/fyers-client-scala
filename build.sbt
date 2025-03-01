@@ -14,5 +14,6 @@ libraryDependencies ++= Seq(
   "org.apache.logging.log4j" % "log4j-core" % "2.21.1",
   "org.apache.logging.log4j" % "log4j-api" % "2.21.1",
   "org.playframework" %% "play-json" % "3.0.1",
-  "org.scalatest" %% "scalatest" % "3.3.0-SNAP4" % Test
+  "org.scalatest" %% "scalatest" % "3.3.0-SNAP4" % Test,
+  "com.google.protobuf" % "protobuf-java" % "3.16.3"
 )

@@ -26,7 +26,7 @@ jobs:
       run: |
         echo "Adding sbt repository..."
         echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
-        curl -fsSL https://repo.scala-sbt.org/scalasbt/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/sbt-archive-keyring.gpg
+        curl -fsSL https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x99E82A75642AC823 | sudo gpg --dearmor -o /usr/share/keyrings/sbt-archive-keyring.gpg
         sudo apt-get update
         sudo apt-get install -y sbt
     - name: Run tests
